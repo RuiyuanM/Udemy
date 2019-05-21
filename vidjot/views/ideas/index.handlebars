@@ -1,0 +1,24 @@
+{{#each ideas}}
+  <div class="card card-body mb-2">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+	<div class="container">
+	  <div class="row">
+		<div class="col-12 col-sm-6 col-md-6">
+		   <form>
+			  <a class="btn btn-secondary btn-block mb-2" href="/ideas/edit/{{id}}">Edit</a>
+		   </form>
+		</div>
+		<div class="col-12 col-sm-6 col-md-6">
+		   <form method="post" action="/ideas/{{id}}?_method=DELETE">
+			  <input type="hidden" name="_method" value="DELETE">
+			  <input type="submit" class="btn btn-danger btn-block" value="Delete">
+		   </form>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+{{else}}
+  <p>No Machine Learning ideas listed</p>
+{{/each}}

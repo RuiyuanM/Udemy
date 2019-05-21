@@ -1,0 +1,54 @@
+<html>
+
+<script language="javascript">
+
+<!--
+
+function updateImage() {
+
+   obj = document.imagename;
+
+   obj.src = obj.src + "?" + Math.random();
+
+   //Following statement sets the delay before the function will
+
+   //call itself again (in milliseconds)
+
+   setTimeout("updateImage()",100);
+
+}
+
+//-->
+
+</script>
+
+
+
+<head>
+
+<title>Refreshing an image</title>
+
+</head>
+
+
+
+<body onload="updateImage()">
+
+<p>Welcome to my web-cam, marvel as the image refreshes while the 
+
+rest of the page does not!</p>
+
+
+
+<img src="C:/Users/alsshxu/Desktop/Website/image.jpeg" name="imagename">
+
+<video width="400" controls>
+  <source src="red_panda_snow.mp4" type="video/mp4">
+  <source src="red_panda_snow.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+
+</html>
+
